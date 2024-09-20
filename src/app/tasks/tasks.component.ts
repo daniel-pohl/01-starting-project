@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './tasks.component.css'
 })
 
-export class UserComponent {
+export class TasksComponent {
   
 
 }
