@@ -2,16 +2,16 @@
 
 <main>
   <ul id="users">
-    <li>
-      <app-user 
-        [user]="users[0]"
-        (select)="onSelectUser($event)" />
-    </li>
-    <li>
-      <app-user 
-        [user]="users[1]"
-        (select)="onSelectUser($event)" />
-    </li>
+    <!-- das Wort "user" ist frei wählbar,
+    aber das Wort "users" aber nicht -->
+    
+    @for (user of users; track user.id) {
+      <li>
+        <app-user 
+          [user]="user"
+          (select)="onSelectUser($event)" />
+      </li>
+    }    
     <!-- <li>
       <app-user [id]="users[2].id" [avatar]="users[2].avatar" [name]="users[2].name" />
     </li> -->
