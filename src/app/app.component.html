@@ -4,7 +4,7 @@
   <ul id="users">
     <!-- das Wort "user" ist frei wählbar,
     aber das Wort "users" aber nicht -->
-    
+
     @for (user of users; track user.id) {
       <li>
         <app-user 
@@ -17,6 +17,11 @@
     </li> -->
   </ul>
 
-  <app-tasks [name]="selectedUser ? selectedUser.name : '' " />
+  @if (selectedUser) {
+    <app-tasks [name]="selectedUser.name" />
+  } @else {
+    <p id="fallback">Select a User plz to see their Tasks</p>
+  }
+  
 
 </main>
