@@ -26,3 +26,11 @@ export class AppComponent {
     this.selectedUserId = id;
   }
 }
+
+/* 
+GIT BASH
+cd C:/Users/danie/Desktop/Angular/01-starting-project
+code .
+dann ng serve
+dann browser http://localhost:4200/
+*/
